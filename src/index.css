@@ -1,13 +1,260 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+
+:root {
+  /* COLORS */
+  --darkest-blue: #0b132b;
+  --dark-blue: #001d3d;
+  --blue: #3a506b;
+  --green-blue: #5bc0be;
+  --light-green: #6fffe9;
+
+  /* FONTS */
+  --font-family: 'Nunito', sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: var(--darkest-blue);
 }
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark-blue);
+}
+
+header h1 {
+  color: var(--green-blue);
+  letter-spacing: 2px;
+}
+
+
+/* Main Container */
+.container {
+  display: flex;
+  place-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  height: 100%;
+  max-width: 760px;
+}
+
+
+
+/* Card Component */
+
+.card {
+  position: relative;
+  margin: 1.5rem;
+  background-color: var(--dark-blue);
+  min-height: 10rem;
+  max-height: auto;
+  width: 100%;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+/* feedback item */
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-container {
+  color: var(--green-blue);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: var(--blue);
+  margin-top: -1rem;
+  margin-left: -1rem;
+}
+
+.feedback-text {
+  color: var(--green-blue);
+  padding-top: 50px;
+  padding-left: 10px;
+}
+
+.close-icon {
+  border: none;
+  border-radius: 1rem;
+  float: right;
+  padding: 10px;
+  background-color: var(--dark-blue);
+  cursor: pointer;
+}
+
+/* Feedback Stats */
+
+.stats-container {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  font-size: 1.2rem;
+  color: var(--green-blue);
+}
+
+/* feedback form */
+ .form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+.form-container h3 {
+  color: var(--green-blue);
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-message {
+  color: var(--green-blue);
+  margin-bottom: 1rem;
+}
+
+
+/* Select Rating */
+
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-right: 8%;
+}
+
+.rating li {
+  position: relative;
+  display: flex;
+  height: 45px;
+  width: 45px;
+  background: var(--green-blue);
+  border-radius: 100%;
+  list-style: none;
+}
+
+.rating li:hover {
+  background: var(--blue);
+}
+
+
+.rating li label {
+  width: 100%;
+  text-align: center;
+  padding-top: 30%;
+}
+
+input[type='radio'] {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  margin-left: -65%;
+  margin-top: -18%;
+}
+
+li:has(input[type="radio"]:checked) {
+  background: var(--blue);
+}
+
+/* Text input */
+
+.text-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  border-radius: 0.5rem;
+  width: 78%;
+  height: 2.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-input {
+  width: 80%;
+  height: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  background: none;
+}
+
+.text-input::placeholder {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+
+.text-input:focus {
+  outline: none;
+}
+
+/* Submit Button */
+
+.submit-btn {
+  color: var(--darkest-blue);
+  background: var(--green-blue);
+  border: none;
+  width: 5.2rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: var(--blue);
+  background: var(--light-green);
+}
+
+.submit-btn:disabled {
+  color: #000;
+  background: var(--blue);
+  cursor: not-allowed;
+}
+
+/* Media queries */
+
+/* @media screen and (max-width: 650px ) {
+
+  main {
+    width: 460px;
+  }
+
+} */
