@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Github Pages](https://danielheppenstiel.github.io/Tic-Tac-Toe-Game/)
+- Live Site URL: [Github Pages](https://danielheppenstiel.github.io/react-feedback-application/)
 
 ## My process
 
